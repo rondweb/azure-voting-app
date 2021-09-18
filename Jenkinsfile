@@ -12,7 +12,9 @@ pipeline {
             steps {
                 sh(script: """
                     cd azure-vote
+                    pwd
                     virtualenv env
+                    pwd
                     source .env/bin/activate                    
                 """)
 
