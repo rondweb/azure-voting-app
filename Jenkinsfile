@@ -15,7 +15,8 @@ pipeline {
                     pwd
                     virtualenv env
                     pwd
-                    source /env/bin/activate                    
+                    cd env/bin
+                    source activate                    
                 """)
 
                 // sh(script: 'virtualenv env')
