@@ -14,7 +14,7 @@ pipeline {
                     cd azure-vote
                     pwd
                     virtualenv env
-                    . .env/bin/activate
+                    . env/bin/activate
                 """)
 
                 // sh(script: 'virtualenv env')
