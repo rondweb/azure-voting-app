@@ -8,10 +8,17 @@ pipeline {
             }
         }     
 
-        stage('Creating conda enviroment') {
+        stage('Creating enviroment') {
             steps {
-                sh(script: 'conda create --name env python=3.9 -y')
-                sh(script: 'conda activate env')                
+                sh(script: """
+                    cd azure-vote
+                    virtualenv env
+                    source .env/bin/activate                    
+                """)
+
+                // sh(script: 'virtualenv env')
+                // sh(script: 'virtualenv env')
+                // sh(script: 'conda activate env')                
             }
         }   
 
