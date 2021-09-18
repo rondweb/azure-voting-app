@@ -76,3 +76,4 @@ pipeline {
             sh 'conda remove --yes -n env --all'
         }
     }
+}
